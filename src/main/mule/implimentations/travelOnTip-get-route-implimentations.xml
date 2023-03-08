@@ -6,8 +6,8 @@
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
-	<sub-flow name="travelOnTip-get-route-implimentationsSub_Flow" doc:id="30aae30c-723b-441c-9a73-19c3b50aedbc" >
-		<db:select doc:name="Select routes for travelOnTip subflow" doc:id="14e3d728-55c9-4436-884c-ca1934a2dbf8" config-ref="Database_Config">
+	<sub-flow name="TravelOnTip-get-route-implimentationsSub_Flow" doc:id="30aae30c-723b-441c-9a73-19c3b50aedbc" >
+		<db:select doc:name="Select routes for TravelOnTipsubflow" doc:id="14e3d728-55c9-4436-884c-ca1934a2dbf8" config-ref="Database_Config">
 			<db:sql><![CDATA[SELECT * FROM Routes where companyName= 'TravelOnTip']]></db:sql>
 		</db:select>
 		<ee:transform doc:name="output data to json" doc:id="bbb64dcc-b853-4fc0-b7da-b9428d6b0f87">

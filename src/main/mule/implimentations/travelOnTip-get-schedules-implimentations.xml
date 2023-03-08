@@ -7,8 +7,8 @@
 	xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd 
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
-	<sub-flow name="travelOnTip-get-schedules-implimentationsSub_Flow" doc:id="5eb0bd23-0dd8-4e1e-b535-82cc1391aa33" >
-		<db:select doc:name="elect schedules for travelOnTip subflow" doc:id="6231a480-cf65-4ecb-becd-4151489b74a0" config-ref="Database_Config">
+	<sub-flow name="TravelOnTip-get-schedules-implimentationsSub_Flow" doc:id="5eb0bd23-0dd8-4e1e-b535-82cc1391aa33" >
+		<db:select doc:name="elect schedules for TravelOnTip subflow" doc:id="6231a480-cf65-4ecb-becd-4151489b74a0" config-ref="Database_Config">
 			<db:sql><![CDATA[SELECT * FROM schedules where companyName= 'TravelOnTip']]></db:sql>
 		</db:select>
 		<ee:transform doc:name="output data to json" doc:id="d3dbefb4-67da-4623-8eef-7a9a586fc8f1">

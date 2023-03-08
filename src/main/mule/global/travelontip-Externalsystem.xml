@@ -25,21 +25,21 @@ output application/java
 attributes.headers.transationId]]></ee:set-variable>
 			</ee:variables>
 		</ee:transform>
-		<logger level="INFO" doc:name="request to traveOnTip" doc:id="b768780c-0840-4d84-8743-eae39151f69c" message="request for travelOnTip external system with transationId #[vars.TransationId]" />
+		<logger level="INFO" doc:name="request to TravelOnTip" doc:id="b768780c-0840-4d84-8743-eae39151f69c" message="request for TravelOnTip external system with transationId #[vars.TransationId]" />
 		<choice doc:name="Choice" doc:id="1ed4e61e-aed3-47f3-bd3c-51f2db576229" >
 			<when expression='#[vars.serviceType == "routes"]'>
-				<logger level="INFO" doc:name="request for routes" doc:id="6e9da3c8-9d84-4dd0-a11e-7d22a8065b7f" message='route request has been sent travelOnTip external system with #[vars.TransationId]'/>
-				<flow-ref doc:name="Flow Reference" doc:id="6f871a2e-115b-4e66-a6ba-723d2c80020e" name="travelOnTip-get-route-implimentationsSub_Flow"/>
+				<logger level="INFO" doc:name="request for routes" doc:id="6e9da3c8-9d84-4dd0-a11e-7d22a8065b7f" message='route request has been sent TravelOnTip external system with #[vars.TransationId]'/>
+				<flow-ref doc:name="Flow Reference" doc:id="6f871a2e-115b-4e66-a6ba-723d2c80020e" name="TravelOnTip-get-route-implimentationsSub_Flow"/>
 			</when>
 			<when expression='#[vars.serviceType== "schedules"]'>
-				<logger level="INFO" doc:name="request for schedules" doc:id="7f4d34e8-564a-48c2-8e0a-4428e8b2d379" message="schedule request has been sent travelOnTip external system with #[vars.TransationId]"/>
-				<flow-ref doc:name="Flow Reference" doc:id="f2c07d6b-2219-4fc9-ac06-74a6a8eb0db7" name="travelOnTip-get-schedules-implimentationsSub_Flow"/>
+				<logger level="INFO" doc:name="request for schedules" doc:id="7f4d34e8-564a-48c2-8e0a-4428e8b2d379" message="schedule request has been sent TravelOnTip external system with #[vars.TransationId]"/>
+				<flow-ref doc:name="Flow Reference" doc:id="f2c07d6b-2219-4fc9-ac06-74a6a8eb0db7" name="TravelOnTip-get-schedules-implimentationsSub_Flow"/>
 			</when>
 			<otherwise >
-				<logger level="INFO" doc:name="default logger" doc:id="deeec2d4-d41e-40b6-a694-9e1d2b73cac8" message="error in requestType has been sent travelOnTip external system with #[vars.TransationId]"/>
+				<logger level="INFO" doc:name="default logger" doc:id="deeec2d4-d41e-40b6-a694-9e1d2b73cac8" message="error in requestType has been sent TravelOnTip external system with #[vars.TransationId]"/>
 			</otherwise>
 		</choice>
-		<logger level="INFO" doc:name="response for travelOnTip" doc:id="e5500007-0953-452c-b92f-2ba2cb1aca96" message="response for travelOnTip external system with transationId #[vars.TransationId]"/>
+		<logger level="INFO" doc:name="response for TravelOnTip" doc:id="e5500007-0953-452c-b92f-2ba2cb1aca96" message="response for TravelOnTip external system with transationId #[vars.TransationId]"/>
 		<error-handler>
 			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="dc9cdbc2-8ac4-4ce0-9b53-1a1941921d56" >
 				<logger level="INFO" doc:name="Logger" doc:id="f6f9846e-f4b7-4db0-8edb-b1d50934a0f4" message="error occured for travelOnTip external system with transationId #[attributes.headers.transationId] error message #[error.errorMessage] errortype #[error.errorType]"/>

@@ -2,7 +2,7 @@ http:
  listener:
   host: "localhost"
   port: "9081"
-  path: "/travelOnTip/{serviceType}"
+  path: "/TravelOnTip/{serviceType}"
   
   
 db:
